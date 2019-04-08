@@ -1,0 +1,45 @@
+
+<div *ngIf="result.store">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <h3>{{result.store.name | uppercase}} Details</h3>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <span>ID: </span>{{result.store.id}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="result.store.name" placeholder="name" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input [(ngModel)]="result.store.address" placeholder="name" class="form-control"/>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="float-left">
+        <button (click)="goBack()" class="btn btn-primary">go back</button>
+
+      </div>
+      <div class="float-right">
+        <button (click)="save()" class="btn btn-primary">save</button>
+      </div>
+
+    </div>
+  </div>
+</div>

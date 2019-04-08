@@ -1,0 +1,88 @@
+<div *ngIf="result.article">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <h3>{{result.article.name | uppercase}} Details</h3>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+          <span>ID: </span>{{result.article.id}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="result.article.name" placeholder="name" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input [(ngModel)]="result.article.description" placeholder="description" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input [(ngModel)]="result.article.price" placeholder="price" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="total_in_shelf">Total in shelf:</label>
+        <input [(ngModel)]="result.article.total_in_shelf" placeholder="total_in_shelf" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="total_in_vault">Total in vault:</label>
+        <input [(ngModel)]="result.article.total_in_vault" placeholder="total_in_vault" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="name">Store:</label>
+        <select [(ngModel)]="result.article.store_id" class="form-control">
+          <option *ngFor="let store of rStore.stores" [selected]="store.id === result.article.store_id" value="{{store.id}}">{{store.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+        <div class="float-left">
+          <button (click)="goBack()" class="btn btn-primary">go back</button>
+        </div>
+        <div class="float-right">
+          <button (click)="save()" class="btn btn-primary">save</button>
+        </div>
+
+
+
+    </div>
+  </div>
+
+
+
+</div>
