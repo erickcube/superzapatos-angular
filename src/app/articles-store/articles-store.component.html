@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+  <div class="col-sm-1">
+    <h3>Articles</h3>
+  </div>
+  <div class="col-sm-1">
+    <a routerLink="/articles/create">
+      <img src="https://img.icons8.com/color/30/000000/plus.png">
+    </a>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-sm-6">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let article of result.articles">
+        <span class="badge badge-primary badge-pill badge-dark">{{article.id}}</span>
+        <a routerLink="/articles/{{article.id}}">
+          {{article.name}}
+        </a>
+        <img src="https://img.icons8.com/color/25/000000/minus.png" (click)="delete(article)">
+      </li>
+    </ul>
+  </div>
+</div>

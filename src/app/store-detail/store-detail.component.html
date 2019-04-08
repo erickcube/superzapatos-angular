@@ -16,6 +16,14 @@
   <div class="row justify-content-center">
     <div class="col-sm-6">
       <div class="form-group">
+        <a routerLink="/articles/stores/{{result.store.id}}">Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="form-group">
         <label for="name">Name:</label>
         <input [(ngModel)]="result.store.name" placeholder="name" class="form-control"/>
       </div>

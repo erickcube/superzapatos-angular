@@ -13,6 +13,7 @@ import { StoreCreateComponent } from './store-create/store-create.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { FooterComponent } from './footer/footer.component';
+import { ArticlesStoreComponent } from './articles-store/articles-store.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     StoreCreateComponent,
     ArticleDetailComponent,
     ArticleCreateComponent,
-    FooterComponent
+    FooterComponent,
+    ArticlesStoreComponent
   ],
   imports: [
     BrowserModule,

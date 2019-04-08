@@ -55,6 +55,14 @@ export class StoreService {
     );
   }
 
+  getStoreArticles(id: number): Observable<any> {
+    const url = `http://superzapatos.tk/services/articles/stores/${id}`;
+    return this.http.get<any>(url,httpOptions).pipe(
+      tap(_ => this.log(`fetched storeArticles id=${id}`)),
+      catchError(this.handleError<any>(`getStoreArticles id=${id}`))
+    );
+  }
+
   /**
   * Updates store on the server
    */

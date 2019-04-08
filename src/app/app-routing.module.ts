@@ -6,6 +6,7 @@ import { StoreCreateComponent }      from './store-create/store-create.component
 import { ArticlesComponent }      from './articles/articles.component';
 import { ArticleDetailComponent }      from './article-detail/article-detail.component';
 import { ArticleCreateComponent }      from './article-create/article-create.component';
+import { ArticlesStoreComponent }      from './articles-store/articles-store.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/stores', pathMatch: 'full' },
@@ -13,8 +14,10 @@ const routes: Routes = [
   { path: 'stores/create', component: StoreCreateComponent },
   { path: 'stores/:id', component: StoreDetailComponent },
   { path: 'articles', component: ArticlesComponent },
+  { path: 'articles/stores/:id', component: ArticlesStoreComponent },
   { path: 'articles/create', component: ArticleCreateComponent },
   { path: 'articles/:id', component: ArticleDetailComponent },
+
 ];
 
 @NgModule({
